@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -21,12 +20,10 @@
     <aside class="sidebar">
       <img src="ID.jpg" alt="Profile Picture" class="profile-pic">
       <p>img.image ID</p>
-
       <p data-en="Skill: Coding and make Fun_Game"
          data-km="ជំនាញ: កូដ និងបង្កើតហ្គេមកំសាន្ត">
          Skill: Coding and make Fun_Game
       </p>
-
       <section class="typing">
       <span class="enum">public enum</span> LANGUAGES {<br>
       <h2>
@@ -39,7 +36,6 @@
       </h2>
               }
         </section>
-
       <div class="code">
         <section class="typing">
           <span class="enum">public enum</span> PLATFORMS {<br>
@@ -48,7 +44,6 @@
           &nbsp;&nbsp;Mobile<br>
           }
         </section>
-
         <section class="typing">
           <span class="enum">public enum</span> LANGUAGES {<br>
           &nbsp;&nbsp;C#, C++, C,<br>
@@ -56,7 +51,6 @@
           &nbsp;&nbsp;Java, HTML5, CSS, JavaScript<br>
           }
         </section>
-
         <section class="typing">
   <span class="enum">public enum</span> SOFTWARE {<br>
   &nbsp;&nbsp;Unity3D, UnrealEngine,<br>
@@ -83,9 +77,6 @@
 </div>
 
 </section>
-
-
-
        <section class="typing">
         <br>
         <span class="enum">public enum</span> MEDIA { <br> <br>
@@ -100,15 +91,12 @@
         </a><br><br>
         }
         </section>
-
-
         <section class="typing">
   <span class="enum">public enum</span> LANGUAGES_LEVEL {<br>
   &nbsp;&nbsp;<span data-en="Khmer = C1" data-km="ខ្មែរ = C1">Khmer = C1</span>,<br>
   &nbsp;&nbsp;<span data-en="Chinese = B2" data-km="ចិន = B2">Chinese = B2</span>,<br>
   &nbsp;&nbsp;<span data-en="English = B2" data-km="អង់គ្លេស = B2">English = B2</span><br>
   }
-
   <!-- Language Chart -->
 <div class="lang-chart">
   <div class="bar">
@@ -131,11 +119,9 @@
 </section>
       </div>
     </aside>
-
     <!-- Main Content -->
     <main class="main">
       <div class="code">
-
         <section class="typing info-block">
   <span class="keyword">public class</span> <span class="class">INFORMATION</span> {<br>
   <div class="code-line">
@@ -217,14 +203,9 @@
   <div class="method">}</div>
   }
 </section>
-
-
         <section class="typing">
-         
         </section>
-
         <section class="typing">
-          
         </section>
       </div>
     </main>
