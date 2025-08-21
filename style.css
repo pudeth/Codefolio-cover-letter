@@ -1,0 +1,287 @@
+/*==================================================
+   Global Style
+==================================================*/
+body {
+  background: #0c0c0c;
+  color: #eaeaea;
+  font-family: "Fira Code", monospace;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+/*==================================================
+   Main Container
+==================================================*/
+.container {
+  display: flex;
+  max-width: 1200px;
+  width: 100%;
+  gap: 24px;
+  background: #1e1e1e;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.7);
+  overflow: hidden;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/*==================================================
+   Sidebar
+==================================================*/
+.sidebar {
+  width: 420px;
+  text-align: left;
+  padding: 25px;
+  border-right: 1px solid #2d2d2d;
+  background: #151515;
+}
+
+.profile-pic {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.6);
+  transition: transform 0.3s ease;
+}
+.profile-pic:hover {
+  transform: scale(1.03);
+}
+
+/*==================================================
+   Main Code Section
+==================================================*/
+.code {
+  flex: 1;
+  padding: 25px;
+  overflow-y: auto;
+}
+
+.code section {
+  border: 1px solid #333;
+  background: #0c0c0c;
+  padding: 16px 20px;
+  margin: 18px 0;
+  border-radius: 8px;
+  transition: border 0.3s, background 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+.code section:hover {
+  border-color: #4ec9b0;
+  background: #111;
+}
+.code section::before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3px;
+  height: 100%;
+  background: #4ec9b0;
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+.code section:hover::before {
+  opacity: 1;
+}
+
+.code h2 {
+  font-size: 16px;
+  font-weight: 500;
+  margin: 12px 0;
+  color: #eaeaea;
+}
+
+/*==================================================
+   Syntax Highlighting
+==================================================*/
+.keyword { color: #4ec9b0; font-weight: 600; }
+.class   { color: #569cd6; font-weight: 600; }
+.string  { color: #ce9178; }
+.number  { color: #b5cea8; }
+.comment { color: #6a9955; font-style: italic; }
+.enum    { color: #c586c0; font-weight: 600; }
+.link    { color: #4fc1ff; text-decoration: none; transition: color 0.3s; }
+.link:hover { text-decoration: underline; color: #82dfff; }
+
+/*==================================================
+   Language Switch Dropdown
+==================================================*/
+.lang-switch {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: #252526;
+  color: #eaeaea;
+  border: 1px solid #3c3c3c;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: "Fira Code", monospace;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+.lang-switch:hover {
+  background: #2d2d2d;
+  border-color: #4ec9b0;
+  color: #4ec9b0;
+}
+
+/* Dropdown container */
+.lang-menu {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  background: #1e1e1e;
+  border: 1px solid #3c3c3c;
+  border-radius: 8px;
+  overflow: hidden;
+  display: none;
+  min-width: 160px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.6);
+}
+
+/* Dropdown options */
+.lang-menu button {
+  background: none;
+  border: none;
+  color: #eaeaea;
+  font-family: "Fira Code", monospace;
+  font-size: 14px;
+  text-align: left;
+  width: 100%;
+  padding: 10px 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.lang-menu button:hover {
+  background: #2d2d2d;
+  color: #4ec9b0;
+}
+
+/* Language Chart */
+.lang-chart {
+  margin: 20px 0;
+  padding: 16px;
+  border: 1px solid #333;
+  border-radius: 8px;
+  background: #0c0c0c;
+}
+
+.lang-chart .bar {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+  font-size: 14px;
+  color: #eaeaea;
+}
+
+.lang-chart .bar span {
+  min-width: 80px;
+}
+
+.lang-chart .progress {
+  flex: 1;
+  height: 10px;
+  background: #2d2d2d;
+  border-radius: 6px;
+  margin: 0 10px;
+  overflow: hidden;
+}
+
+.lang-chart .progress .fill {
+  height: 100%;
+  background: linear-gradient(90deg, #4ec9b0, #569cd6);
+  border-radius: 6px;
+  transition: width 0.6s ease;
+}
+
+.lang-chart .percent {
+  min-width: 40px;
+  text-align: right;
+  color: #4ec9b0;
+  font-weight: bold;
+}
+
+.link i {
+  margin-right: 6px;
+  color: #4ec9b0; /* match your syntax theme */
+  transition: color 0.3s;
+}
+.link:hover i {
+  color: #82dfff;
+}
+
+/* Software Skill Chart */
+.soft-chart {
+  margin: 20px 0;
+  padding: 16px;
+  border: 1px solid #333;
+  border-radius: 8px;
+  background: #0c0c0c;
+}
+
+.soft-chart .bar {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+  font-size: 14px;
+  color: #eaeaea;
+}
+
+.soft-chart .bar span {
+  min-width: 130px;
+}
+
+.soft-chart .progress {
+  flex: 1;
+  height: 10px;
+  background: #2d2d2d;
+  border-radius: 6px;
+  margin: 0 10px;
+  overflow: hidden;
+}
+
+.soft-chart .progress .fill {
+  height: 100%;
+  background: linear-gradient(90deg, #c586c0, #569cd6);
+  border-radius: 6px;
+  transition: width 0.6s ease;
+}
+
+.soft-chart .percent {
+  min-width: 40px;
+  text-align: right;
+  color: #4ec9b0;
+  font-weight: bold;
+}
+
+/* Better code readability */
+.info-block {
+  padding: 16px;
+  line-height: 1.6;
+}
+
+.code-line {
+  margin-left: 20px;
+  display: block;
+}
+
+.method {
+  margin-left: 10px;
+  color: #82dfff;
+  font-style: italic;
+}
+
+.indent {
+  margin-left: 40px;
+}
+
